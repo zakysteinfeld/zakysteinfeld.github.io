@@ -1,12 +1,12 @@
 {
-  "name": "portofolio",
-  "version": "1.0.0",
+  "name": "portfolio",
+  "version": "4.5.26",
   "description": "",
-  "homepage": "https://zakysteinfeld.github.io/portofolio/",
+  "homepage": "https://zakysteinfeld.github.io/portfolio/",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/argon-design-system-react.git"
+    "url": "git+https://github.com/zakysteinfeld/portfolio.git"
   },
   "keywords": [
     "react",

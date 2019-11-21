@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import { Card, Container, Row, Col } from "reactstrap";
 import { Drawer, Divider } from "antd";
 
 export default class MyStory extends Component {
@@ -129,7 +129,7 @@ export default class MyStory extends Component {
                           <p>
                           Hi! My name is <span className="semiBold">Muhamad Zaky</span>, you can call me <span className="semiBold">Zaky</span>, I'm a Front End Developer currently, using javascript framework <span className="semiBold">ReactJS</span> with speciality in <span className="semiBold">.NET (C#)</span> on the back.
                           </p>
-                          <a href="#" onClick={this.drawerOnClick}>
+                          <a href="#ModalProfile" onClick={this.drawerOnClick}>
                             Show more
                           </a>
                         </Col>
