@@ -32,13 +32,12 @@ import Login from "views/examples/Login.jsx";
 import Profile from "views/examples/Profile.jsx";
 import Register from "views/examples/Register.jsx";
 import MyStory from "views/IndexSections/MyStory";
-import { DEV_URI, PROD_URI, DEV_ENV, PROD_ENV } from "commons/utils/routes-utils";
+import { DEV_ENV, PROD_ENV } from "commons/utils/routes-utils";
 
 export default class Layout extends Component {
   render () {
     const envVar = 'PROD_ENV'
     const env = envVar === 'DEV_ENV' ? DEV_ENV : PROD_ENV
-    const uri = envVar === 'DEV_ENV' ? DEV_URI : PROD_URI
     return (
       <BrowserRouter>
         <NavBar uri={env} />
