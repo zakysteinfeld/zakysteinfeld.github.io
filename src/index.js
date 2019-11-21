@@ -36,7 +36,7 @@ import { DEV_ENV, PROD_ENV } from "commons/utils/routes-utils";
 
 export default class Layout extends Component {
   render () {
-    const envVar = 'PROD_ENV'
+    const envVar = 'DEV_ENV'
     const env = envVar === 'DEV_ENV' ? DEV_ENV : PROD_ENV
     return (
       <BrowserRouter>

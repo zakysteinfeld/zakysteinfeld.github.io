@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
+  "homepage": "https://zakysteinfeld.github.io",
   "version": "4.5.26",
   "description": "",
-  "homepage": "https://zakysteinfeld.github.io/portfolio/",
   "main": "index.js",
   "repository": {
     "type": "git",
