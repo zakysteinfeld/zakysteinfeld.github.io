@@ -60,7 +60,7 @@ export default class Layout extends Component {
             render={props => <Register {...props} />}
           />
           <Route 
-            path={ env + "MyStory"}
+            path={ env + "stories"}
             exact
             render={props => <MyStory {...props} />}
           />

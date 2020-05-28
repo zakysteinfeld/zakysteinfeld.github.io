@@ -23,6 +23,36 @@
   src: url('./../font/SF-Pro-Rounded-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'Google Sans Regular';
+  src: url('./../font/GoogleSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Google Sans Medium';
+  src: url('./../font/GoogleSans-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Google Sans Medium Italic';
+  src: url('./../font/GoogleSans-MediumItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Google Sans Italic';
+  src: url('./../font/GoogleSans-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Google Sans Bold';
+  src: url('./../font/GoogleSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Google Sans Bold Italic';
+  src: url('./../font/GoogleSans-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 .sf-pro-rounded {
   font-family: "SF Pro Rounded Regular";
 
@@ -43,9 +73,25 @@
   }
 }
 
+.google-sans {
+  font-family: "Google Sans Regular";
+
+  .medium {
+    font-family: "Google Sans Medium";
+  }
+
+  .bold {
+    font-family: "Google Sans Bold";
+  }
+
+  .italic {
+    font-family: "Google Sans Italic";
+  }
+}
+
 .hi-text {
   font-weight: 600;
-  font-size: 65px;
+  margin: 0.5rem 0rem;
 }
 
 .boldedText-Intro {

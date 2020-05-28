@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Card, Container, Row, Col } from "reactstrap";
-import { Drawer, Divider } from "antd";
+import { Card, Container, Row, Col, Button } from "reactstrap";
+import { Drawer, Divider, Progress } from "antd";
+import Mailto from "react-protected-mailto";
 
 export default class MyStory extends Component {
   constructor(props) {
@@ -21,6 +22,18 @@ export default class MyStory extends Component {
       visible: !this.state.visible,
     });
   };
+
+  skills = () => {
+    return (
+      <div>
+        <Row><Col lg={1}>Javascript (React JS)</Col> <Col lg={5}><Progress strokeColor={{ from: '#108ee9', to: '#87d068' }} percent={89} status="active" /></Col></Row>
+        <Row><Col lg={1}>.NET</Col> <Col lg={5}><Progress strokeColor={{ from: '#108ee9', to: '#87d068' }} percent={69} status="active" /></Col></Row>
+        <Row><Col lg={1}>SQL Server</Col> <Col lg={5}><Progress strokeColor={{ from: '#108ee9', to: '#87d068' }} percent={60} status="active" /></Col></Row>
+        <Row><Col lg={1}>Corel DRAW</Col> <Col lg={5}><Progress strokeColor={{ from: '#108ee9', to: '#87d068' }} percent={90} status="active" /></Col></Row>
+        <Row><Col lg={1}>Photoshop</Col> <Col lg={5}><Progress strokeColor={{ from: '#108ee9', to: '#87d068' }} percent={60} status="active" /></Col></Row>
+      </div>
+    )
+  }
   
   render () {
     const pStyle = {
@@ -33,7 +46,7 @@ export default class MyStory extends Component {
     
     const DescriptionItem = ({ title, content }) => (
       <div
-        className="sf-pro-rounded"
+        className="google-sans"
         style={{
           fontSize: 14,
           lineHeight: '22px',
@@ -42,7 +55,7 @@ export default class MyStory extends Component {
         }}
       >
         <p
-          className="sf-pro-rounded"
+          className="google-sans"
           style={{
             marginRight: 8,
             display: 'inline-block',
@@ -103,35 +116,38 @@ export default class MyStory extends Component {
                         className="order-lg-2 text-lg-left align-self-lg-center"
                         lg="8"
                       >
-                        <div className="card-profile-actions py-4 mt-lg-0 sf-pro-rounded">
+                        <div className="card-profile-actions py-4 mt-lg-0 google-sans">
                           <h3>
-                            Muhamad Zaky{" "}
-                            <span className="thin">, 21</span>
+                            Muhamad Zaky<span className="thin">, 21</span>
                           </h3>
                           <div className="h6 light">
                             <i className="ni ni-pin-3 mr-2" />
-                            Bandung, Indonesia
+                            <a href="https://goo.gl/maps/U2rgpzzyYUrNeXMg6" target="_blank" rel="noopener noreferrer" style={{ color: "#35325D" }}>
+                              Bandung, Indonesia
+                            </a>
                           </div>
                           <div className="h6 mt-3">
                             <i className="ni ni-briefcase-24 mr-2" />
                             Front End Developer (React JS), .NET Developer
                           </div>
-                          <div>
+                          <div className="h6 mt-3">
                             <i className="ni ni-hat-3 mr-2" />
-                            SMKN 4 Bandung
+                            <a href="https://goo.gl/maps/sSjg8HbzJPdhePgR7" target="_blank" rel="noopener noreferrer" style={{ color: "#35325D" }}>
+                              SMKN 4 Bandung
+                            </a>
                           </div>
                         </div>
                       </Col>
                     </Row>
-                    <div className="mt-5 py-5 border-top text-center sf-pro-rounded">
+                    <div className="mt-5 py-5 border-top text-center google-sans">
                       <Row className="justify-content-center">
                         <Col lg="9">
                           <p>
                           Hi! My name is <span className="semiBold">Muhamad Zaky</span>, you can call me <span className="semiBold">Zaky</span>, I'm a Front End Developer currently, using javascript framework <span className="semiBold">ReactJS</span> with speciality in <span className="semiBold">.NET (C#)</span> on the back.
                           </p>
-                          <a href="#ModalProfile" onClick={this.drawerOnClick}>
+                          <Button color="primary" type="button" onClick={this.drawerOnClick}>
                             Show more
-                          </a>
+                          </Button>
                         </Col>
                       </Row>
                     </div>
@@ -149,9 +165,9 @@ export default class MyStory extends Component {
           visible={this.state.visible}
           drawerStyle={{ borderTopLeftRadius: "25px", borderTopRightRadius: "25px" }}
         >
-          <p className="sf-pro-rounded bold" style={{ ...pStyle, marginBottom: 24 }}>User Profile</p>
-          <p className="sf-pro-rounded semiBold" style={pStyle}>Personal</p>
-          <Row className="sf-pro-rounded">
+          <p className="google-sans bold" style={{ ...pStyle, marginBottom: 24 }}>Profile</p>
+          <p className="google-sans semiBold" style={pStyle}>Personal</p>
+          <Row className="google-sans">
             <Col span={12}>
               <DescriptionItem title="Full Name" content="Muhamad Zaky" />
             </Col>
@@ -176,7 +192,7 @@ export default class MyStory extends Component {
             </Col>
           </Row>
           <Divider />
-          <p className="sf-pro-rounded semiBold" style={pStyle}>Company</p>
+          <p className="google-sans semiBold" style={pStyle}>Company</p>
           <Row>
             <Col span={12}>
               <DescriptionItem title="Position" content="Programmer" />
@@ -189,18 +205,18 @@ export default class MyStory extends Component {
             <Col span={24}>
               <DescriptionItem
                 title="Skills"
-                content="Javascript (React JS), Typescript, .NET, SQL Server"
+                content={this.skills()}
               />
             </Col>
           </Row>
           <Divider />
-          <p className="sf-pro-rounded semiBold" style={pStyle}>Contacts</p>
+          <p className="google-sans semiBold" style={pStyle}>Contacts</p>
           <Row>
             <Col span={12}>
-              <DescriptionItem title="Email" content="zakysteinfeld@outlook.com" />
+              <DescriptionItem title="Email" content={<Mailto email='zakysteinfeld@outlook.com' headers={ {subject:'Hi!'}, {cc:'zakysteinfeld@gmail.com'} }/>} />
             </Col>
             <Col span={12}>
-              <DescriptionItem title="Phone Number" content="+62 819-0454-6023" />
+              <DescriptionItem title="Phone Number" content={<Mailto tel='+62 819-0454-6023'/>} />
             </Col>
           </Row>
           <Row>

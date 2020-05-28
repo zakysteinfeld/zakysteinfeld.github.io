@@ -4,29 +4,19 @@ import {
   Row,
   Col
 } from "reactstrap"
-import { Icon } from "antd"
+import { HeartFilled } from '@ant-design/icons';
 import { Link } from "react-router-dom"
 
 export default class Footer extends Component {
   render () {
     const { uri } = this.props
     return (
-      <footer className="footer sf-pro-rounded">
+      <footer className="footer google-sans">
         <Container>
             <hr/>
             <Row className="align-items-center justify-content-md-between">
-              <Col md="6">
-                <div className="copyright">
-                  © {new Date().getFullYear()}{" "}
-                    • Developed with <Icon type="heart" theme="filled" /> by Muhamad Zaky.
-                </div>
-              </Col>
-              <Col md="6" className="textLink" style={{ display: "flex", justifyContent: "flex-end" }}>
-                <Link
-                  to={uri + "MyStory"}
-                >
-                  My Story
-                </Link>
+              <Col className="text-center">
+                © {new Date().getFullYear()}{" "} • Developed with <HeartFilled /> by Muhamad Zaky
               </Col>
             </Row>
           </Container>

@@ -11,19 +11,20 @@ class Hero extends React.Component {
             <Container className="shape-container d-flex align-items-center py-lg">
               <div className="col px-0">
                 <Row className="align-items-center justify-content-center">
-                  <Col lg="8">
+                  <Col lg="10">
                     <Row>
-                      <Col lg="5">
+                      <Col lg="6">
                         <img
                           alt="..."
-                          className="img-fluid image-profile shadow-lg"
-                          src={require("assets/img/pict.jpg")}
+                          className="img-fluid image-profile shadow-white"
+                          src={require("assets/img/profile.jpg")}
                         />
                       </Col>
-                      <Col className="sf-pro-rounded" lg="7">
+                      <Col className="google-sans vertical-align-middle" lg="6">
+                        <p className="text-white name-text">Muhamad Zaky</p>
                         <p className="lead text-white hi-text">Hi.</p>
-                        <p className="text-white">
-                          &nbsp;&nbsp;&nbsp;&nbsp;I'm <text className="boldedText-Intro">Zaky</text>, I'm a Front End developer currently, using Javascript framework <text className="boldedText-Intro">React JS</text> with sepaciality with <text className="boldedText-Intro">.NET(C#)</text> on the back.
+                        <p className="text-white text-justify">
+                          I'm <span className="boldedText-Intro">Zaky</span>, I'm a Front End developer currently, using Javascript framework <span className="boldedText-Intro">React JS</span> with sepaciality in <span className="boldedText-Intro">.NET(C#)</span> on the back.
                         </p>
                       </Col>
                     </Row>

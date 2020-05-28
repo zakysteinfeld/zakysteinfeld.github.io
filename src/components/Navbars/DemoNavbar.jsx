@@ -17,6 +17,7 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import { UserOutlined, FacebookFilled, TwitterOutlined, InstagramFilled, GithubFilled } from '@ant-design/icons';
 // JavaScript plugin that hides or shows a component based on your scroll
 import Headroom from "headroom.js";
 // reactstrap components
@@ -30,8 +31,14 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
+  DropdownToggle,
+  DropdownMenu,
+  Media,
+  UncontrolledDropdown,
+  DropdownItem
 } from "reactstrap";
+import Logoo from "../../assets/img/brand/logo-port.png"
 
 class DemoNavbar extends React.Component {
   componentDidMount() {
@@ -51,7 +58,7 @@ class DemoNavbar extends React.Component {
           >
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <span className='navbar-logo'>Muhamad Zaky</span>
+                <img src={Logoo} alt="白山ざき" />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
@@ -61,7 +68,7 @@ class DemoNavbar extends React.Component {
                   <Row>
                     <Col className="collapse-brand" xs="6">
                       <Link to={uri}>
-                        <span className='navbar-logo'>Muhamad Zaky</span>
+                        <img src={Logoo} alt="白山ざき" />
                       </Link>
                     </Col>
                     <Col className="collapse-close" xs="6">
@@ -80,7 +87,7 @@ class DemoNavbar extends React.Component {
                       id="tooltip333589074"
                       target="_blank"
                     >
-                      <i className="fa fa-facebook-square" />
+                      <FacebookFilled style={{ color: "#fff"}} />
                       <span className="nav-link-inner--text d-lg-none ml-2">
                         Facebook
                       </span>
@@ -96,7 +103,7 @@ class DemoNavbar extends React.Component {
                       id="tooltip356693867"
                       target="_blank"
                     >
-                      <i className="fa fa-instagram" />
+                      <InstagramFilled style={{ color: "#fff"}} />
                       <span className="nav-link-inner--text d-lg-none ml-2">
                         Instagram
                       </span>
@@ -112,7 +119,7 @@ class DemoNavbar extends React.Component {
                       id="tooltip184698705"
                       target="_blank"
                     >
-                      <i className="fa fa-twitter-square" />
+                      <TwitterOutlined style={{ color: "#fff"}} />
                       <span className="nav-link-inner--text d-lg-none ml-2">
                         Twitter
                       </span>
@@ -128,13 +135,29 @@ class DemoNavbar extends React.Component {
                       id="tooltip112445449"
                       target="_blank"
                     >
-                      <i className="fa fa-github" />
+                      <GithubFilled style={{ color: "#fff"}} />
                       <span className="nav-link-inner--text d-lg-none ml-2">
                         Github
                       </span>
                     </NavLink>
                     <UncontrolledTooltip delay={0} target="tooltip112445449">
                       Follow me on Github
+                    </UncontrolledTooltip>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      href="stories"
+                      id="tooltip112445450"
+                      // target="_blank"
+                    >
+                      <UserOutlined style={{ color: "#fff"}} />
+                      <span className="nav-link-inner--text d-lg-none ml-2">
+                        My Stories
+                      </span>
+                    </NavLink>
+                    <UncontrolledTooltip delay={0} target="tooltip112445450">
+                      See My Stories
                     </UncontrolledTooltip>
                   </NavItem>
                 </Nav>
