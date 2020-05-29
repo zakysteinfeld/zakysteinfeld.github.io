@@ -1,0 +1,150 @@
+p.text-white.name-text {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.section.section.section-lg.section-hero.section-shaped {
+  // background: linear-gradient(150deg, #edf5ff 15%, #e5f0ff 70%, #cdd5de 94%);
+  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+}
+
+.headroom--not-top {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  // background-color: #e5f0ff !important;
+  box-shadow: 0 1px 10px rgba(130, 130, 134, 0.1);
+}
+
+.navbar-brand img {
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+a.toggle-menu {
+  color: white; 
+}
+
+a.toggle-menu:hover {
+  color: white; 
+}
+
+.footer.has-cards:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 600px;
+  height: 2000px;
+  // background: #f4f5f7;
+  background: white !important;
+  -webkit-transform: skew(0, -8deg);
+  transform: skew(0, -8deg);
+}
+
+.footer {
+  background: white;
+  padding: 2rem 0;
+}
+
+.blue-icon {
+  color: #001a2e;
+}
+
+div.mailme a {
+  background: #1565c0;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+}
+
+.vertical-align-middle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#wave {
+  position: relative;
+  height: 90px;
+  width: 100%;
+  background: #e0efe3;
+}
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 425px;
+  height: 80px;
+  background-color: white;
+  right: 0;
+  top: 40px;
+}
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 80% 50%;
+  width: 425px;
+  height: 140px;
+  background-color: #e0efe3;
+  left: 0;
+  top: 0px;
+}
+
+.work .modal-content {
+  border: 0;
+  padding: 0;
+  @if $enable-rounded {
+      border-radius: $modal-content-border-radius-custom;
+  } @else {
+      border-radius: 0;
+  }  
+}
+
+.confidental-project {
+  background: #35325d;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  width: fit-content;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+p.project-name-modal {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+p.project-year-modal {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.client-img.ant-avatar img {
+  display: initial;
+  width: 100%;
+  height: unset;
+  object-fit: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  vertical-align: middle;
+  margin-top: -6px;
+  margin-bottom: auto;
+}
+
+span.ant-tag {
+  // background: #35325f;
+  border-radius: 25px;
+  border-color: transparent;
+  color: white;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+}
